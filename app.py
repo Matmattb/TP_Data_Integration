@@ -1,14 +1,3 @@
-"""
-Data Quality Dashboard — Road-traffic personal-injury accidents (BAAC 2024)
-TP Data Integration & Applications (EFREI ST2DLDI)
-
-Run with:
-    pip install streamlit pandas plotly numpy
-    streamlit run app.py
-
-Put the 4 CSVs (caract / lieux / vehicules / usagers -2024.csv) in the same folder,
-or set the path in the sidebar.
-"""
 import os
 import numpy as np
 import pandas as pd
@@ -140,15 +129,6 @@ def main():
     st.title("Data Quality Dashboard — Road-injury accidents (BAAC 2024)")
     st.caption("Data profiling & quality — TP Data Integration & Applications")
 
-    with st.sidebar:
-        st.header("Settings")
-        data_dir = st.text_input("CSV folder", value=".")
-        st.markdown("---")
-        st.markdown(
-            "**Sentinels detected as missing:**\n\n"
-            "`-1`, `N/A`, empty, `null`…\n\n"
-            "The BAAC format codes unknown values as `-1`: a naïve `isna()` would miss them."
-        )
 
     # Load
     try:
