@@ -129,6 +129,7 @@ def main():
     st.title("Data Quality Dashboard — Road-injury accidents (BAAC 2024)")
     st.caption("Data profiling & quality — TP Data Integration & Applications")
 
+    data_dir = "." 
 
     # Load
     try:
